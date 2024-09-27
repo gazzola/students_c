@@ -6,9 +6,13 @@ Abra o Visual Studio Code e adicione as seguintes extensões:
 
 - **C/C++** (Microsoft): Para suporte básico à linguagem C/C++ e depuração.  
   Instale a extensão via [link para marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools).
+  <img width="1092" alt="image" src="https://github.com/user-attachments/assets/ab03f511-66c3-4e56-8e49-83379647b271">
+
 
 - **C/C++ Compile Run**: Para facilitar a compilação e execução do código C/C++ diretamente no VSCode.  
   Instale a extensão via [link para marketplace](https://marketplace.visualstudio.com/items?itemName=danielpinto8zz6.c-cpp-compile-run).
+  <img width="1346" alt="image" src="https://github.com/user-attachments/assets/559ced6d-7be3-4c89-8164-cd88309916d5">
+
 
 ### Baixando e Instalando o MinGW
 
@@ -17,6 +21,8 @@ Você precisará de um compilador para C. O MinGW é uma excelente opção.
 1. Baixe o instalador do MinGW aqui:  
    [https://sourceforge.net/projects/mingw/](https://sourceforge.net/projects/mingw/)
 2. Durante a instalação, selecione os componentes `mingw32-gcc-g++` e `mingw32-gcc-objc`.
+3. ![image](https://github.com/user-attachments/assets/9dc4e976-ae8d-495d-a1ab-44363108f2e0)
+
 
 ### Adicionando MinGW às Variáveis de Ambiente
 
@@ -38,6 +44,7 @@ Agora, o ambiente está configurado!
 Com o código-fonte em C aberto no VSCode, ao pressionar `F6`, o código será compilado e executado automaticamente no terminal integrado do VSCode.
 
 ---
+![image](https://github.com/user-attachments/assets/98c5c3d3-5d6b-4f09-8c90-04e9ed060ef1)
 
 # Código C: Resolver Sudoku (teste o ambiente)
 
