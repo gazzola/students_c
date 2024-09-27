@@ -39,7 +39,7 @@ Com o código-fonte em C aberto no VSCode, ao pressionar `F6`, o código será c
 
 ---
 
-# Exemplo de Código C: Resolver Sudoku
+# Código C: Resolver Sudoku (teste o ambiente)
 
 Aqui está um exemplo de código em C para resolver um Sudoku utilizando backtracking.
 
