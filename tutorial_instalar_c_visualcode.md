@@ -55,7 +55,7 @@ Aqui está um exemplo de código em C para resolver um Sudoku utilizando backtra
 
 #define N 9
 
-// Função para imprimir a grade do Sudoku
+
 void printSudoku(int grid[N][N]) {
     for (int row = 0; row < N; row++) {
         for (int col = 0; col < N; col++)
@@ -64,19 +64,19 @@ void printSudoku(int grid[N][N]) {
     }
 }
 
-// Função para verificar se é seguro colocar um número na célula (row, col)
+
 int isSafe(int grid[N][N], int row, int col, int num) {
-    // Verificar a linha
+    
     for (int x = 0; x < N; x++)
         if (grid[row][x] == num)
             return 0;
 
-    // Verificar a coluna
+    
     for (int x = 0; x < N; x++)
         if (grid[x][col] == num)
             return 0;
 
-    // Verificar o bloco 3x3
+    
     int startRow = row - row % 3, startCol = col - col % 3;
     for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
@@ -86,43 +86,39 @@ int isSafe(int grid[N][N], int row, int col, int num) {
     return 1;
 }
 
-// Função para resolver o Sudoku usando backtracking
+
 int solveSudoku(int grid[N][N], int row, int col) {
-    // Se chegamos ao fim da última linha, o Sudoku está resolvido
+    
     if (row == N - 1 && col == N)
         return 1;
 
-    // Se a coluna excede o limite, movemos para a próxima linha
+    
     if (col == N) {
         row++;
         col = 0;
     }
 
-    // Ignorar as células que já estão preenchidas
+    
     if (grid[row][col] != 0)
         return solveSudoku(grid, row, col + 1);
 
-    // Tentar números de 1 a 9
     for (int num = 1; num <= 9; num++) {
-        // Verificar se é seguro colocar o número na célula
         if (isSafe(grid, row, col, num)) {
             grid[row][col] = num;
 
-            // Recursivamente tentar preencher o restante do grid
             if (solveSudoku(grid, row, col + 1))
                 return 1;
         }
 
-        // Se a tentativa falhar, desfazemos a atribuição
         grid[row][col] = 0;
     }
 
     return 0;
 }
 
-// Função principal
+
 int main() {
-    // Exemplo de Sudoku incompleto (0s representam células vazias)
+    
     int grid[N][N] = {
         {5, 3, 0, 0, 7, 0, 0, 0, 0},
         {6, 0, 0, 1, 9, 5, 0, 0, 0},
